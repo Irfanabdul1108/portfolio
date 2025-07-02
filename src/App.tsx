@@ -71,6 +71,7 @@ import udemy from '@/assets/udemy.png'
 import cpp from '@/assets/cpp.png'
 import figma from '@/assets/figma.png'
 import ccna from '@/assets/ccna.png'
+import codeide from '@/assets/codeide.png'
 // import gfg from '../src/assets/gfg.png'
 import python from '@/assets/python.png'
 // import random from '@/assets/randompic.jpg'
@@ -98,50 +99,28 @@ const sections = [
 ]
 
 const projects = [
-  {
+   {
     id: 1,
-    title: "Social Connect",
-    image: social,
-    livelink: "https://social-connect-brown.vercel.app/",
-    githublink: "https://github.com/Irfanabdul1108/SOCIAL-CONNECT",
+    title: "Code Editor Pro",
+    image: codeide,
+    livelink: "https://code-ide-pro-2.onrender.com/",
+    githublink: "https://github.com/Irfanabdul1108/code-ide-pro.git",
     description:
-      "A comprehensive social networking platform built with React and modern web technologies. Features real-time messaging, user profiles, and dynamic content sharing.",
-    tech: ["React", "Node.js", "MongoDB", "Socket.io"],
-    category: "Web Application",
+      "Code Editor Pro is an advanced real-time collaborative code editor that allows multiple users to code together in the same room. It supports live file editing, syntax highlighting, language detection, real-time chat, AI-based code suggestions, and much more — all in a seamless, synchronized environment.",
+    tech: ["React", "Tailwind CSS", "Type Script", "Socket.io", "Express.js", "Node.js", "React Router", "Render"],
+    category: ["Web ", "Full Stack"],
   },
   {
     id: 2,
-    title: "Animated Website 02",
-    image: anime2,
-    livelink: "https://animatedwebsite02.netlify.app/",
-    githublink: "https://github.com/Irfanabdul1108/ANIMATED_WEBSITE-02",
+    title: "SocialVibe",
+    image: social,
+    livelink: "https://socialvibe-one.vercel.app/",
+    githublink: "https://github.com/Irfanabdul1108/socialvibe.git",
     description:
-      "An immersive animated website showcasing advanced CSS animations and JavaScript interactions. Features smooth scrolling, parallax effects, and responsive design.",
-    tech: ["HTML5", "CSS3", "JavaScript", "GSAP"],
-    category: "Animation",
-  },
-  {
-    id: 3,
-    title: "Portfolio Website",
-    image: "/placeholder.svg?height=300&width=400",
-    livelink: "https://animatedwebsite01.netlify.app/",
-    githublink: "https://github.com/Irfanabdul1108/ANIMATED_WEBSITE-01",
-    description:
-      "A creative portfolio website with stunning animations and modern design principles. Showcases projects and skills with interactive elements.",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
-    category: "Portfolio",
-  },
-  {
-    id: 4,
-    title: "CRUD Application",
-    image: crud,
-    livelink: "https://miniprojectcrud.netlify.app/",
-    githublink: "https://github.com/Irfanabdul1108/CRUD-APPLICATION",
-    description:
-      "A full-featured CRUD application with user authentication, data validation, and responsive design. Built with modern web technologies.",
-    tech: ["React", "Express.js", "MongoDB", "JWT"],
-    category: "Full Stack",
-  },
+      "This project is a dynamic, feature-rich website designed to provide users with a seamless and interactive experience. The website includes robust authentication and authorization mechanisms, profile management, real-time CRUD operations, and a responsive design adhering to modern UI/UX principles.",
+    tech: ["React","Firebase","Tailwind CSS"],
+    category: ["Web ", "Full Stack"],
+  }
 ]
 
 const certifications = [
@@ -275,14 +254,7 @@ const profiles = [
     color: "#2EC866",
     link: "https://www.hackerrank.com/profile/abdulirfan1108",
     followers: "3⭐",
-  },
-  {
-    name: "CodeChef",
-    icon: <SiCodechef />,
-    color: "#5B4638",
-    link: "https://www.codechef.com/users/abdulirfan1108",
-    followers: "2⭐",
-  },
+  }
 ]
 
 const themes = [
@@ -582,7 +554,7 @@ function AboutSection({ theme }: { theme: any }) {
           <FaGithub className={`text-xl sm:text-2xl text-${theme.accent}`} />
           <h2 className="text-xl sm:text-2xl font-bold text-gray-800">Connect With Me</h2>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
           {profiles.map((profile, index) => (
             <motion.a
               key={profile.name}
@@ -716,7 +688,7 @@ function ProjectsSection({ theme }: { theme: any }) {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          My Projects
+          My Resume Projects
         </motion.h1>
         <motion.p
           className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-6 sm:mb-8 px-4"
@@ -726,28 +698,6 @@ function ProjectsSection({ theme }: { theme: any }) {
         >
           Showcasing my latest work and creative solutions
         </motion.p>
-
-        {/* Filter Buttons */}
-        <motion.div
-          className="flex flex-wrap justify-center gap-2 sm:gap-3 px-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-        >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setFilter(category)}
-              className={`px-3 sm:px-6 py-2 rounded-full font-medium transition-all text-sm sm:text-base ${
-                filter === category
-                  ? `bg-gradient-to-r ${theme.primary} text-white shadow-lg`
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </motion.div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
