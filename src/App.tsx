@@ -72,6 +72,7 @@ import cpp from '@/assets/cpp.png'
 import figma from '@/assets/figma.png'
 import ccna from '@/assets/ccna.png'
 import codeide from '@/assets/codeide.png'
+import talknlearn from '@/assets/talknlearn.png'
 // import gfg from '../src/assets/gfg.png'
 import python from '@/assets/python.png'
 // import random from '@/assets/randompic.jpg'
@@ -110,8 +111,19 @@ const projects = [
     tech: ["React", "Tailwind CSS", "Type Script", "Socket.io", "Express.js", "Node.js", "React Router", "Render"],
     category: ["Web ", "Full Stack"],
   },
-  {
+   {
     id: 2,
+    title: "TalknLearn",
+    image: talknlearn,
+    livelink: "https://streamify-1sc1.onrender.com/",
+    githublink: "https://github.com/Irfanabdul1108/TalknLearn.git",
+    description:
+      "TalknLearn is a real-time language exchange platform where users can chat and make video calls to learn new languages together. It supports messaging with typing indicators, reactions, 1-on-1/group video calls with screen sharing, and more — all in a beautifully customizable interface.",
+    tech: ["React.js","Tailwind CSS","Zustand (State Management)","TanStack Query","Node.js","Express.js","MongoDB","JWT","Stream API","Render"],
+    category: ["Web ", "Full Stack"],
+  },
+  {
+    id: 3,
     title: "SocialVibe",
     image: social,
     livelink: "https://socialvibe-one.vercel.app/",
